@@ -99,10 +99,6 @@ export function HeroSlide() {
       {/* Editorial copy */}
       <div className="relative z-20 flex h-full flex-col justify-center px-6 md:px-10 lg:px-16">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 text-xs font-light uppercase tracking-[0.2em] text-cloud/90 backdrop-blur-md">
-            <span className="size-1.5 rounded-full bg-aqua" />
-            AI Background Removal
-          </span>
 
           <h1 className="mt-6 font-serif text-4xl font-light leading-[1.05] tracking-tight text-balance text-cloud sm:text-6xl lg:text-7xl">
             Unmistakable clarity.
@@ -116,17 +112,38 @@ export function HeroSlide() {
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
+            {/* ── Start your cut — fancy shimmer button ── */}
             <button
               type="button"
+              id="hero-cta"
               onClick={() =>
                 document
                   .getElementById("workspace")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-cloud/95 px-6 py-3.5 text-sm font-medium text-ink shadow-lg shadow-black/20 backdrop-blur-md transition-all hover:bg-cloud hover:shadow-xl"
+              className={[
+                // Base shape & colour (keep the white theme)
+                "group relative inline-flex items-center gap-2.5 overflow-hidden",
+                "rounded-full px-7 py-3.5 text-sm font-semibold text-ink",
+                "bg-cloud/95 shadow-[0_4px_24px_rgba(255,255,255,0.18),0_1px_4px_rgba(0,0,0,0.25)]",
+                // Subtle gradient border ring
+                "ring-1 ring-white/30 hover:ring-white/60",
+                // Smooth transitions
+                "transition-all duration-300 ease-out",
+                "hover:bg-cloud hover:shadow-[0_6px_32px_rgba(255,255,255,0.28),0_2px_8px_rgba(0,0,0,0.3)]",
+                "hover:scale-[1.03] active:scale-[0.98]",
+                "backdrop-blur-md",
+              ].join(" ")}
             >
-              Start your cut
-              <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              {/* Shimmer sweep overlay */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 ease-in-out group-hover:translate-x-full"
+              />
+              <span className="relative">Start your cut</span>
+              <ArrowUpRight
+                className="relative size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:rotate-12"
+              />
             </button>
 
             <span
