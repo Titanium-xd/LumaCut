@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="public/icon.svg" width="40" alt="LumaCut icon" /><br/>
+  <img src="public/icon.png" width="40" alt="LumaCut icon" /><br/>
   LumaCut
 </h1>
 
