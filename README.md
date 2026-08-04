@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <strong>Studio-grade AI background removal — entirely in your browser.</strong><br/>
+  <strong>Studio-grade background removal tool — entirely in your browser.</strong><br/>
   Zero uploads. Zero servers. Zero cost per image. Just unmistakable clarity.
 </p>
 
