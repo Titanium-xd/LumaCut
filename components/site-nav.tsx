@@ -17,7 +17,7 @@ export function SiteNav() {
         aria-label="LumaCut home"
       >
         <span
-          style={{ fontFamily: "'Glesary', cursive", transform: "rotate(-4deg)", display: "inline-block" }}
+          style={{ fontFamily: "var(--font-marker)", transform: "rotate(-4deg)", display: "inline-block" }}
           className="text-[2.5rem] leading-none tracking-wide text-cloud drop-shadow-[0_1px_12px_rgba(120,220,230,0.55)]"
         >
           Luma<span className="text-aqua-soft">Cut</span>

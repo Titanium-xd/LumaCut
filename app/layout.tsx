@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter, Fraunces } from 'next/font/google'
+import { Inter, Fraunces, Permanent_Marker } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -14,6 +14,13 @@ const fraunces = Fraunces({
   variable: '--font-serif',
   display: 'swap',
   style: ['normal', 'italic'],
+})
+
+const permanentMarker = Permanent_Marker({
+  subsets: ['latin'],
+  variable: '--font-marker',
+  weight: '400',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -51,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable} bg-background`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${permanentMarker.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
