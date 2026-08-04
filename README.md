@@ -28,7 +28,7 @@ Most background-removal tools upload your images to a cloud server, charge per A
 
 ## 🖼️ Before & After
 
-### Demo 1 — Anime illustration
+### Demo 1 — Anime illustration 
 
 | Before | After |
 |:---:|:---:|
